@@ -40,126 +40,98 @@ Para hacer eso debemos tener en cuenta lo siguiente:
 ![Imagen nº1](img/3.2.PNG)
 
 
-# Quedando nuestro código de la siguiente manera.
 
-![](img/9.png)
+## Hora de comprobar el funcionamiento de nuestra base:
 
-# Paso #5
+![Imagen nº1](img/4.2.PNG)
 
-# Creación del archivo que contiene nuestra base de datos. Comprobamos su correcto funcionamiento.
+### 2.Estos son los pasos a seguir:
 
-![](img/10.png)
-Pasos:
+2.1. Entramos a la consola Flask usando `flask shell`.
+2.2. Luego escribimos el comando `from app import db` donde app es el documento donde tenemos la base y db es la base.
+2.3. Usamos el comando `db.create_all()` para generar la base.
 
-1. Accedemos a la consola Flask haciendo uso del comando `flask shell`.
-2. Importamos de nuestra aplicación flask "app" db para poder generar nuestra base de datos.
-3. Generamos nuestra base de datos haciendo uso del comando `db.create_all()`.
+## Hacemos la comprobacion de la base.
+![Imagen nº1](img/4.3.PNG)
+![Imagen nº1](img/4.4.PNG)
 
-### Procedemos a comprobar su correcto funcionamiento.
+### 3.Para comprabar nuesta base debemos hacer lo siguiente:
 
-![](img/11.png)
-
-Pasos:
-
-1. Debemos verificar que tenemos instalada la herramienta sqlite3.
-2. Ejecutamos el comando `sqlite3 nombre_del_archivo_db`.
+1. Comprobamos que sqlite3 este instalada.
+2. Ejecutamos el comando `sqlite3 nombre_archivo_db`.
 3. Verificamos las tablas creadas con el comando `.tables`.
 4. Verificamos el esquema de cada una de nuestras tablas con el comando `.schema`.
 
-De esa forma comprobamos que todo está en orden y podemos continuar.
 
-# Paso #6
 
-# Agregar información a nuestra base de datos.
+## Agregar información a nuestra base de datos.
 
-![](img/12.png)
+![Imagen nº1](img/5.1.PNG)
+![Imagen nº1](img/5.2.PNG)
 
-Pasos:
+### 4. Para agregar informacion a nuestra tabla debemos hacer lo siguiente
 
-1. Accedemos a nuestra consola Flask con el comando `flask shell`.
-2. Importamos de nuestra app flask "app": db, Product, Order, Customer.
-3. Para crear un registro primero creamos una variable y creamos una instancia de la clase (model), en este caso queremos agregar un cliente llamado jhondoe.
-4. Añadimos a nuestra base de datos al cliente haciendo uso del comando `db.session.add(nombre_de_la_variable)`.
-5. Por último, guardamos los cambios con el comando `db.session.commit()`.
+1. Entramos a flask con el comando `flask shell`.
+2. Importamos de nuestra app flask con los atributos  db, Product, Order, Customer.
+3. Creamos una variable la cual llamaremos como pepepa donde luego indicaremos `nombre_tabla(nombre_col, nombre_col)`.
+4. Añadimos a nuestra base de datos al cliente haciendo uso del comando `db.session.add(nombre_variable)`.
+5. Por último hacemos un commit `db.session.commit()`.
 
-### Procedemos a comprobar que hemos agregado correctamente a nuestro cliente.
+## Hacemos la comprobacion de la base.
 
-![](img/13.png)
+![Imagen nº1](img/5.3.PNG)
 
-Pasos:
+### 5.Para comprabar nuesta base debemos hacer lo siguiente:
 
-1. Ejecutamos el comando `sqlite3 nombre_del_archivo_db`.
-2. Realizamos una query `select * from customer;`.
-3. Observamos que nuestro usuario ha sido agregado correctamente.
+5.1. Ejecutamos el comando `sqlite3 nombre_del_archivo_db`.
+5.2. Realizamos una query `select * from customer;`.
+5.3. Observamos que nuestro usuario ha sido agregado correctamente.
 
-### Añadimos más datos a nuestra base de datos.
+### 6.1Añadimos más datos a nuestra base de datos.
 
-![](img/14.png)
+![Imagen nº1](img/5.4.PNG)
 
-### Comprobamos que han sido agregados de forma correcta.
+### 6.2Comprobamos que han sido agregados de forma correcta.
 
-![](img/15.png)
+![Imagen nº1](img/5.5.PNG)
 
-# Paso #7
+## Actualizar nuestra base de datos.
 
-# Actualizar nuestra base de datos.
+![Imagen nº1](img/6.1.PNG)
 
-![](img/16.png)
+### 7.Para actualizar informacion de nuestra tabla debemos hacer lo siguiente
 
-Pasos:
-
-1. Accedemos a nuestra consola Flask.
-2. Importamos de nuestra app flask "app": db, Customer.
-3. Realizamos una query utilizando un filtro `filter_by()` y decimos por convenio que queremos solo el primer registro utilizando `first()`.
+1. Entramos a flask con el comando `flask shell`.
+2. Importamos de nuestra app flask con los atributos  db, Product, Order, Customer.
+3. Realizamos una query utilizando un filtro `filter_by()` para coger el atributo que queremos cambiar y luego usamos `first()`para solo tener 1.
 4. Comprobamos que es el registro que deseamos actualizar.
-5. En este caso deseo actualizar la dirección `jhondoe.address = "..."`.
+5. En este caso deseo actualizar la dirección `pepepa.address = "456"`.
 6. Una vez actualizado el valor, guardamos los cambios `db.session.commit()`.
 
-# Paso #8
 
-# Borrar datos.
+## Borrar datos de nuestra base 
 
-![](img/17.png)
-![](img/18.png)
-![](img/19.png)
-![](img/20.png)
+![Imagen nº1](img/7.1.PNG)
+![Imagen nº1](img/7.2.PNG)
+![Imagen nº1](img/7.3.PNG)
 
-Pasos:
+
+### 8.Para borrar informacion de nuestra tabla debemos hacer lo siguiente
 
 1. Creamos un nuevo registro, para luego eliminarlo.
 2. Comprobamos que ha sido agregado correctamente.
 3. Hacemos una query para poder encontrar el registro que deseamos y lo asignamos una variable.
 4. Comprobamos que es el registro que deseamos eliminar.
-5. Eliminamos el registro haciendo uso del comando `db.session.delete(nombre_de_la_variable)`.
+5. Eliminamos el registro haciendo uso del comando `db.session.delete(nombre_variable)`.
 6. Guardamos los cambios con `db.session.commit()`.
 7. Comprobamos que ha sido eliminado correctamente.
 
-# Paso #9
+## Generar información para nuestra base de datos.
+Para ello usaremos Faker 
 
-# Generar información para nuestra base de datos.
-
-Para ello utilizamos la librería Faker para generar datos falsos.
-Ya la hemos instalado desde el inicio del tutorial cuando creamos el entorno de trabajo.
-
-### Creamos un método para generar 100 clientes falsos.
+### 9.Para crear informacion de nuestra tabla debemos hacer lo siguiente
 
 ![](img/21.png)
-
-### Creamos un método para generar 1000 pedidos.
-
-![](img/22.png)
-
-### Creamos un método para agregar 10 productos.
-
-![](img/23.png)
-
-### Establecemos la relación entre Order y Product.
-
-![](img/24.png)
-
-### Creamos un método para llamar a las funciones anteriormente creadas y generar la información para nuestra base de datos.
-
-![](img/25.png)
 
 ### Borramos la base de datos que creamos al inicio.
 
