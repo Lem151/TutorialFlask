@@ -1,6 +1,6 @@
 # TutorialFlask
 Este es el seguimiento del tutorial de flask 
-
+# Parte A
 ## Creación del entorno virtual.
 
 ---
@@ -131,149 +131,46 @@ Para ello usaremos Faker
 
 ### 9.Para crear informacion de nuestra tabla debemos hacer lo siguiente
 
-![](img/21.png)
+![Imagen nº1](img/16.1.PNG)
+![Imagen nº1](img/16.2.PNG)
 
-### Borramos la base de datos que creamos al inicio.
-
-![](img/26.png)
 
 ### Abrimos nuestra consola Flask e importamos el método para generar información.
 
-![](img/27.png)
+![Imagen nº1](img/8.1.PNG)
+![Imagen nº1](img/8.2.PNG)
 
-Como podemos ver se puede verificar que el archivo ha sido creado.
+Como podemos ver se crean las instancias que le pedimos a las variables que creamos
 
-### Verificamos que la información ha sido correctamente generada.
 
-Para ello accedemos a nuestra base de datos con el comando ```sqlite3 nombre_de_la_base_de_datos```.
-
-![](img/28.png)
-
-![](img/29.png)
-
-![](img/30.png)
-
-![](img/31.png)
-
-Como podemos observar, nuestra base de datos tiene la información deseada.
-
-# Paso #10
-# Realizando queries a nuestra base de datos.
-
+# Parte B
 ### Pedidos realizados por un cliente.
 
-![](img/32.png)
-
-![](img/33.png)
-
-#### Modificamos nuestra función.
-
-![](img/34.png)
-
-![](img/35.png)
-
-![](img/36.png)
-
-Como podemos observar, nuestro método funciona correctamente.
-
-### Queremos saber cuantos pedidos hay pendientes.
-
-![](img/37.png)
-
-![](img/38.png)
-
-### Número de clientes. 
-
-![](img/39.png)
-
-![](img/40.png)
+![Imagen nº1](img/9.1.PNG)
+![Imagen nº1](img/9.2.PNG)
 
 
-Vemos que funciona correctamente.
+### Cuantos clientes hay?
 
-### Órdenes con cupón de compra.
+![Imagen nº1](img/10.PNG)
 
-#### Que no sea nulo y no sea el cupón "FREESHIPPING".
 
-![](img/41.png)
-![](img/42.png)
+### Usos de los cupones que nos sean "FRFEESHIPING"
 
-#### Ahora queremos todos los que tengan cupón.
-
-![](img/43.png)
-![](img/44.png)
-
-Vemos que todo funciona correctamente.
+![Imagen nº1](img/11.PNG)
 
 ### Queremos los ingresos en los x días anteriores, por defecto definimos 30.
 
-![](img/45.png)
-![](img/46.png)
+![Imagen nº1](img/12.PNG)
 
+### Tiempo que tarda la entrega
 
-Vemos que todo funciona correctamente.
-
-### Tiempo promedio que se demora un cliente en completar su compra.
-
-![](img/47.png)
-![](img/48.png)
-
-Vemos que todo funciona correctamente.
+![Imagen nº1](img/13.PNG)
 
 ### Por último queremos saber cuantos clientes han gastado una cantidad superior a x cantidad de dollars.
 
-![](img/49.png)
-![](img/50.png)
-![](img/51.png)
-![](img/52.png)
-
-Vemos que todo funciona correctamente e hicimos varias pruebas con diversas cantidades.
-
+![Imagen nº1](img/14.PNG)
 
 # Fin
 
-![](img/fin.png)
----
-# Extra.
-
-Si deseamos no utilizar la línea de comandos para visualizar el contenido de nuestra base de datos 
-podemos instalar la siguiente herramienta [SQlite Browser](https://sqlitebrowser.org/dl/).
-
-En distribuciones derivadas de DEBIAN / UBUNTU podemos ejecutar los siguientes comandos:
-```
-sudo apt-get update
-sudo apt-get install sqlitebrowser
-```
-### Ejemplo de uso:
-
-#### Así luce el entorno.
-
-![](img/extra1.png)
-
-#### Seleccionamos la opción de *abrir base de datos* y seleccionamos la base de datos de nuestro proyecto.
-
-![](img/extra2.png)
-
-#### Seleccionamos la opción de Browse Data y podemos visualizar todas las tablas:
-
-# Customer:
-
-![](img/extra3.png)
-
-# Order:
-
-![](img/extra4.png)
-
-# order_product: 
-
-![](img/extra5.png)
-
-# Product:
-
-![](img/extra6.png)
-
-# También podemos realizar consultas SQL a nuestra base de datos :
-
-![](img/extra7.png)
-
-# ```FIN```
+![Imagen nº1](img/15.PNG)
