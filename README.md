@@ -9,55 +9,36 @@ Lo que tenemos que hacer ahora es comprobar si tenemos venv
 
 ### 1.Si esta instalada esto es lo que hay que hacer
 
-1.1. Ejecutamos powershell y nos movemos a donde queramos crear la carpeta
-1.2. Creamos una carpeta con `mkdir nombre_carpeta`.
-1.3. Entramos dentro de ella: `cd nombre_carpeta`.
-1.4. Ejecutamos el comando `py -3 -m venv env`.
-1.5. Ahora ejecutamos el comando  `env\Scripts\activate` que es para activar el entorno que emos creado
+1.1 Ejecutamos powershell y nos movemos a donde queramos crear la carpeta.
+1.2 Creamos una carpeta con `mkdir nombre_carpeta`.
+1.3 Entramos dentro de ella: `cd nombre_carpeta`.
+1.4 Ejecutamos el comando `py -3 -m venv env`.
+1.5 Ahora ejecutamos el comando  `env\Scripts\activate` que es para activar el entorno que emos creado.
 
-En la siguiente captura ya he instalado los recursos necesarios para llevar a cabo este tutorial:
+Una vez hecho esto nos vamos a visual studio y creamos en la carpeta del venv un `.py` que se llamara app donde escribiremos lo siguiente:
 
  ![Imagen nº1](img/1.PNG)
 ------
 
-## Creamos un archivo Python y procedemos a configurar nuestra base de datos.
+## Creamos nuestras tablas (Models).
 
----
+![Imagen nº1](img/2.PNG)
 
-![](img/2.png)
+Para hacer eso debemos tener en cuenta lo siguiente:
 
-Como podemos observar:
-
-1. Primero importamos lo que vamos a necesitar.
-2. Creamos una instancia que por convenio se llama app.
-3. Haciendo uso del método `config` configuramos nuestra base de datos.
-4. Por último, establecemos una relación entre nuestra app de Flask y nuestra base de datos.
-
----
-
-# Paso #3:
-
-# Creamos nuestras tablas (Models).
-
-![](img/3.png)
-![](img/4.png)
-![](img/5.png)
-
-Como podemos observar:
-
-1. Creamos las columnas de nuestras tablas y establecemos el tipo de datos de cada una de ellas.
-2. Establecemos como primary_key la columna id en las 3 tablas.
+1. Al establecer las columnas de nuestras tablas tenemos que asignar el tipo de datos de cada una de ellas.
+2. Debemos esatablecer como primary_key la columna id en las 3 tablas.
 3. En caso de la tabla Order, la columna order_date recibirá por defecto la hora en ese momento.
-4. Las columnas que no pueden recibir un valor nulo, contienen dentro de su declaración la palabra reservada `nullable` con valor `False`.
-5. Las columnas, que son únicas, contienen dentro de su declaración la palabra reservada `unique` con valor `True`.
+4. Si queremos que nuestra columna no pueda recivir valores nulos usaremos  `nullable` con valor `False`.
+5. Si queremos que nuestra columna no pueda recivir repetidos nulos usaremos `unique` con valor `True`.
 
-# Paso #4
 
-# Establecemos la relación entre nuestras tablas.
 
-![](img/6.png)
-![](img/7.png)
-![](img/8.png)
+## Establecemos la relación entre nuestras tablas.
+
+![Imagen nº1](img/3.1.PNG)
+![Imagen nº1](img/3.2.PNG)
+
 
 # Quedando nuestro código de la siguiente manera.
 
