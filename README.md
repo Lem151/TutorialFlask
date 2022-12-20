@@ -17,8 +17,8 @@ Lo que tenemos que hacer ahora es comprobar si tenemos venv
 
 En la siguiente captura ya he instalado los recursos necesarios para llevar a cabo este tutorial:
 
- ![](img/1.png)
-
+ ![Imagen nº1](img/1.PNG)
+------
 
 ## Creamos un archivo Python y procedemos a configurar nuestra base de datos.
 
