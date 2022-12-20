@@ -147,6 +147,7 @@ Como podemos ver se crean las instancias que le pedimos a las variables que crea
 ### Pedidos realizados por un cliente.
 
 ![Imagen nº1](img/9.1.PNG)
+
 ![Imagen nº1](img/9.2.PNG)
 
 
